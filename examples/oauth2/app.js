@@ -35,6 +35,7 @@ passport.use(new GoogleStrategy({
     callbackURL: "http://127.0.0.1:3000/auth/google/callback"
   },
   function(accessToken, refreshToken, profile, done) {
+  	profile.accessToken = accessToken; //for Google API
     // asynchronous verification, for effect...
     process.nextTick(function () {
       
@@ -88,8 +89,8 @@ app.get('/login', function(req, res){
 //   redirecting the user to google.com.  After authorization, Google
 //   will redirect the user back to this application at /auth/google/callback
 app.get('/auth/google',
-  passport.authenticate('google', { scope: ['https://www.googleapis.com/auth/userinfo.profile',
-                                            'https://www.googleapis.com/auth/userinfo.email'] }),
+  passport.authenticate('google', { scope: ['profile',
+                                            'email'] }),
   function(req, res){
     // The request will be redirected to Google for authentication, so this
     // function will not be called.
