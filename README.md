@@ -13,6 +13,11 @@ unobtrusively integrated into any application or framework that supports
 
     $ npm install passport-google-oauth
 
+
+edit your package.json
+	, "passport-google-oauth": "baryon/passport-google-oauth"
+
+
 ## Usage of OAuth 1.0
 
 #### Configure Strategy
