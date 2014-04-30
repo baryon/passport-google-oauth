@@ -113,7 +113,7 @@ and the [OAuth 2.0 example](https://github.com/jaredhanson/passport-google-oauth
     $ npm install --dev
     $ make test
 
-[![Build Status](https://secure.travis-ci.org/jaredhanson/passport-google-oauth.png)](http://travis-ci.org/jaredhanson/passport-google-oauth)
+[![Build Status](https://secure.travis-ci.org/baryon/passport-google-oauth.png)](http://travis-ci.org/baryon/passport-google-oauth)
 
 ## Credits
 
